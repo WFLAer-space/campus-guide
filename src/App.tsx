@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { buildings } from './data/campusData';
 import { Building, Floor, Room } from './types/campus';
 import { Header } from './components/Header';
