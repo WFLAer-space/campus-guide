@@ -1,4 +1,3 @@
-import React from 'react';
 import { Floor } from '../types/campus';
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';

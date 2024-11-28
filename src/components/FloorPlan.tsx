@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Room } from '../types/campus';
 import { getRoomColor } from '../utils/roomUtils';

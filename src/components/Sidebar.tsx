@@ -1,4 +1,3 @@
-import React from 'react';
 import { Building, Floor, Room } from '../types/campus';
 import { BuildingSelector } from './BuildingSelector';
 import { FloorSelector } from './FloorSelector';
