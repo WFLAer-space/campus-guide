@@ -2,7 +2,23 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-in': {
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(-1rem) translateX(-50%)',
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0) translateX(-50%)',
+          }
+        }
+      },
+      animation: {
+        'fade-in': 'fade-in 0.15s cubic-bezier(0.4, 0, 0.2, 1)'
+      }
+    },
   },
   plugins: [],
 };

@@ -5,7 +5,6 @@ const legendItems: Array<{ type: Room['type']; label: string }> = [
   { type: 'classroom', label: 'Classroom' },
   { type: 'office', label: 'Office' },
   { type: 'laboratory', label: 'Laboratory' },
-  { type: 'restroom', label: 'Restroom' },
   { type: 'other', label: 'Other' }
 ];
 

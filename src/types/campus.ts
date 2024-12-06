@@ -10,7 +10,7 @@ export interface Teacher {
 export interface Room {
   id: string;
   name?: string;
-  type: 'classroom' | 'office' | 'laboratory' | 'restroom' | 'other';
+  type: 'classroom' | 'office' | 'laboratory' | 'other';
 }
 
 export interface Floor {

@@ -3,18 +3,18 @@
     {
       "id": "t001",
       "name": "曹阳 Henry",
-      "office": "A201",
-      "email": "sarah.johnson@campus.edu",
-      "wechat": "sj_teach",
-      "subject": "Mathematics"
+      "office": "A402",
+      "email": "wfla",
+      "wechat": "maths_vs_physics",
+      "subject": "Physics"
     },
     {
       "id": "t002",
-      "name": "Prof. Michael Chen",
+      "name": "褚馨宇",
       "office": "B305",
-      "email": "m.chen@campus.edu",
-      "wechat": "chen_mike",
-      "subject": "Physics"
+      "email": "swzx_chuxy@wflms.com",
+      "wechat": "xingexinge2013",
+      "subject": "Economics"
     },
     {
       "id": "t003",
@@ -42,10 +42,6 @@
               "id": "A102",
               "name": "Physics Lab",
               "type": "laboratory"
-            },
-            {
-              "id": "A103",
-              "type": "restroom"
             }
           ]
         },
