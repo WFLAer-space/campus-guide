@@ -1,18 +1,20 @@
+export interface Teacher {
+  id: string;
+  name: string;
+  office: string;
+  email: string;
+  wechat: string;
+  subject: string;
+}
+
 export interface Room {
   id: string;
-  number: string;
-  name: string;
-  type: 'classroom' | 'office' | 'laboratory' | 'restroom' | 'stairs' | 'elevator';
-  x: number;
-  y: number;
-  width: number;
-  height: number;
+  name?: string;
+  type: 'classroom' | 'office' | 'laboratory' | 'restroom' | 'other';
 }
 
 export interface Floor {
-  id: string;
   level: number;
-  name: string;
   rooms: Room[];
 }
 
@@ -20,4 +22,9 @@ export interface Building {
   id: string;
   name: string;
   floors: Floor[];
+}
+
+export interface CampusData {
+  teachers: Teacher[];
+  buildings: Building[];
 }

@@ -1,53 +1,22 @@
-import { useState } from 'react';
-import { buildings } from './data/campusData';
-import { Building, Floor, Room } from './types/campus';
-import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
-import { FloorPlan } from './components/FloorPlan';
+import React, { useState } from 'react';
+import { TeacherSearch } from './components/TeacherSearch';
+import { CampusMap } from './components/CampusMap';
+import { Navbar } from './components/layout/Navbar';
 
 export default function App() {
-  const [selectedBuilding, setSelectedBuilding] = useState<Building>(buildings[0]);
-  const [selectedFloor, setSelectedFloor] = useState<Floor>(buildings[0].floors[0]);
-  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
-
-  const handleBuildingChange = (building: Building) => {
-    setSelectedBuilding(building);
-    setSelectedFloor(building.floors[0]);
-    setSelectedRoom(null);
-  };
-
-  const handleFloorChange = (floor: Floor) => {
-    setSelectedFloor(floor);
-    setSelectedRoom(null);
-  };
-
-  const handleRoomClick = (room: Room) => {
-    setSelectedRoom(room);
-  };
+  const [activeView, setActiveView] = useState<'teachers' | 'map'>('teachers');
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-          <div className="lg:col-span-1">
-            <Sidebar
-              buildings={buildings}
-              selectedBuilding={selectedBuilding}
-              selectedFloor={selectedFloor}
-              selectedRoom={selectedRoom}
-              onBuildingChange={handleBuildingChange}
-              onFloorChange={handleFloorChange}
-            />
-          </div>
+      <Navbar activeView={activeView} onViewChange={setActiveView} />
 
-          <div className="lg:col-span-3">
-            <FloorPlan
-              rooms={selectedFloor.rooms}
-              onRoomClick={handleRoomClick}
-            />
-          </div>
+      <main className="max-w-7xl mx-auto px-4 py-6">
+        <div className={`space-y-6 ${activeView === 'map' ? 'max-w-5xl mx-auto' : ''}`}>
+          {activeView === 'teachers' ? (
+            <TeacherSearch />
+          ) : (
+            <CampusMap />
+          )}
         </div>
       </main>
     </div>

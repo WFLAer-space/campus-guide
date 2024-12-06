@@ -1,0 +1,91 @@
+{
+  "teachers": [
+    {
+      "id": "t001",
+      "name": "曹阳 Henry",
+      "office": "A201",
+      "email": "sarah.johnson@campus.edu",
+      "wechat": "sj_teach",
+      "subject": "Mathematics"
+    },
+    {
+      "id": "t002",
+      "name": "Prof. Michael Chen",
+      "office": "B305",
+      "email": "m.chen@campus.edu",
+      "wechat": "chen_mike",
+      "subject": "Physics"
+    },
+    {
+      "id": "t003",
+      "name": "Dr. Emily Williams",
+      "office": "C102",
+      "email": "e.williams@campus.edu",
+      "wechat": "em_williams",
+      "subject": "Chemistry"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "A",
+      "name": "Main Building",
+      "floors": [
+        {
+          "level": 1,
+          "rooms": [
+            {
+              "id": "A101",
+              "name": "Class 10(1)",
+              "type": "classroom"
+            },
+            {
+              "id": "A102",
+              "name": "Physics Lab",
+              "type": "laboratory"
+            },
+            {
+              "id": "A103",
+              "type": "restroom"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "rooms": [
+            {
+              "id": "A201",
+              "name": "Mathematics Office",
+              "type": "office"
+            },
+            {
+              "id": "A202",
+              "name": "Class 11(2)",
+              "type": "classroom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Science Building",
+      "floors": [
+        {
+          "level": 3,
+          "rooms": [
+            {
+              "id": "B305",
+              "name": "Physics Office",
+              "type": "office"
+            },
+            {
+              "id": "B306",
+              "name": "Chemistry Lab",
+              "type": "laboratory"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
